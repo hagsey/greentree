@@ -21,7 +21,9 @@ gulp.task('bundleScripts', function() {
   return gulp.src([
     './dist/js/vendor/rellax.js',
     './dist/js/vendor/wow.js',
-    './dist/js/app.js'
+    './dist/js/app.js',
+    './dist/js/main.js'
+
   ])
   .pipe(concat('app.js'))
   .pipe(gulp.dest('./assets/js'));

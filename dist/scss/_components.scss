@@ -413,33 +413,84 @@ ul.archive {
   right: 0;
   left: 0;
   z-index: 999;
-  padding: 4px 8px;
-  background: $color-white;
-  box-shadow: 0px 1px 4px #838383;
+  padding: 0 8px;
+  background: #191919;
+  box-shadow: 0 1px 12px 0px rgba(0,0,0,5);
   
   .navbar {
     margin: 0 auto;
     max-width: $mq-xl;
     width: 90%;
+    padding: 12px 0;
+
+    @media (max-width: $mq-sm) {
+      width: 100%;
+    }
   }
 
   .nav-title {
     float: left;
+    
     .title {
       margin-bottom: 0;
-    }
-  }
-  .nav-items {
-    float: right;
-    li {
-      display: inline-block;
-      margin-left: 1em;
+      letter-spacing: 0.1em;
+
       a {
-        font-family: $font-header;
+        color: $color-white;
+      }
+  
+      @media (max-width: $mq-sm) {
+        letter-spacing: 0;
+      }
+    }
+
+    span {
+      // @extend %letter-spacing;
+      font-family: $font-header;
+    }
+
+    .subtitle {
+      letter-spacing: 0.1em;
+      font-size: 0.8em;
+      color: $color-subtitle;
+
+      @media (max-width: $mq-sm) {
+        font-size: 0.8em;
+        letter-spacing: 0;
       }
     }
   }
- }
+
+  .nav-items {
+    float: right;
+    top: 16px;
+    position: relative;
+
+    li {
+      display: inline-block;
+      margin-left: 0.5em;
+      a {
+        font-family: $font-header;
+        font-size: 1.1em;
+        color: $color-white;
+      }
+    }
+
+    @media (max-width: $mq-md) {
+      display: none;
+      width: 100%;
+
+      li {
+        display: block;
+        text-align: center;
+        margin: 0;
+        padding: 5px 0;
+        border-top: 1px solid $color-subtitle;
+      }
+    }
+  }
+}
+
 .nav {
   @extend %letter-spacing;
 
@@ -490,6 +541,31 @@ ul.archive {
     &:focus {
       color: $color-white;
     }
+  }
+}
+
+.hamburger {
+  position: relative;
+  top: 12px;
+  float: right;
+  margin-right: 15px;
+  padding: 4px 0;
+  background-color: transparent;
+  background-image: none;
+  border: 2px solid $color-white;
+  border-radius: 4px;
+  cursor: pointer;
+
+  .icon-bar {
+    background: $color-white;
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+    margin: 5px 7px;
+  }
+  @media (max-width: $mq-md) {
+    display: block;
   }
 }
 
@@ -785,21 +861,21 @@ ul.archive {
       @media (max-width: $mq-sm) {
         font-size: 2.5em;
       }
+    }
 
-    }
-    span {
-      // @extend %letter-spacing;
-      font-family: $font-header;
-    }
-    .subtitle {
-      letter-spacing: 0.3em;
-      font-size: 1.3em;
-      color: $color-subtitle;
+    // span {
+    //   // @extend %letter-spacing;
+    //   font-family: $font-header;
+    // }
+    // .subtitle {
+    //   letter-spacing: 0.3em;
+    //   font-size: 1.3em;
+    //   color: $color-subtitle;
 
-      @media (max-width: $mq-sm) {
-        font-size: 0.8em;
-      }
-    }
+    //   @media (max-width: $mq-sm) {
+    //     font-size: 0.8em;
+    //   }
+    // }
   }
 
    .intro-container {

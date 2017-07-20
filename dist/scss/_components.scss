@@ -49,7 +49,7 @@
     list-style-type: none;
   }
 }
-
+    
 
     .email-sign-up {
       text-align: center;
@@ -77,6 +77,34 @@
         box-sizing: border-box;
         background: $color-alpha;
         color: $color-white;
+        border-radius: 2px;
+      }
+    }
+    .post-email-sign-up {
+      background: $color-alpha;
+      padding: 0.8em;
+      text-align: center;
+      color: white;
+      input#mce-EMAIL {
+        border-radius: 2px;
+        padding: 0.5em;
+        border-style: none;
+        font-size: 0.8em;
+      }
+      
+      label[for="mce-EMAIL"] {
+        font-size: 0.8em;
+      }
+      #mc-embedded-subscribe {
+        border: 1px solid $color-alpha;
+        cursor: pointer;
+        padding: 0.5em;
+        font-size: 0.8em;
+        margin: 0 0 0 4px;
+        background: $color-black;
+        color: $color-white;
+        position: relative;
+        box-sizing: border-box;
         border-radius: 2px;
       }
     }
@@ -594,7 +622,7 @@ ul.archive {
  
   h1, h2 {
     line-height: 1.2;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
   }
 
   ol, ul {
@@ -631,7 +659,7 @@ ul.archive {
   }
 
   a {
-    color: $color-link;
+    color: $color-alpha;
   }
 
   img {
@@ -702,31 +730,66 @@ ul.archive {
  * Author Card
  */
 
- .author {
-  border-top: 1px solid #dadada;
-  width: 90%;
-  max-width: $mq-md;
-  margin: 0 auto;
+ // .author {
+ //  border-top: 1px solid #dadada;
+ //  width: 90%;
+ //  max-width: $mq-md;
+ //  margin: 0 auto;
 
-  @media (min-width: $mq-md) {
-    width: 65%;
-  }
+ //  @media (min-width: $mq-md) {
+ //    width: 65%;
+ //  }
 
-  .author-image {
-    display: inline-block;
-    width: 125px;
-    img {
-      border-radius: 50%;
+ //  .author-image {
+ //    display: inline-block;
+ //    width: 125px;
+ //    img {
+ //      border-radius: 50%;
+ //    }
+ //  }
+
+ //  .author-container {
+ //    width: calc(100% - 150px);
+ //    display: inline-block;
+ //    vertical-align: top;
+ //    margin-left: 10px;
+ //  }
+ // }
+
+
+//Subscribe container
+
+  .subscribe-container {
+    text-align: center;
+
+    label[for="mce-EMAIL"] {
+      display: none;
+    }
+    input#mce-EMAIL {
+        border-radius: 2px;
+        background: rgba(255, 255, 255, 0.3);
+        width: 60%;
+        padding: 0.5em;
+        color: $color-white;
+        border-style: none;
+        font-size: 0.8em;
+        line-height: 1.42857143;
+        color: #555555;
+        border: 1px solid #ccc;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+        box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+        -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+        -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+        transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    }
+    .subscribe-content {
+      margin-left: 10em;
+      text-align: left;
+      .email-sign-up {
+        text-align: left;
+      }
     }
   }
-
-  .author-container {
-    width: calc(100% - 150px);
-    display: inline-block;
-    vertical-align: top;
-    margin-left: 10px;
-  }
- }
 
  /**
  * Profile Card
@@ -879,6 +942,9 @@ ul.archive {
   }
 
    .intro-container {
+      background: url(/assets/images/ericmain.png);
+      background-position: center center;
+      background-size: cover;
 
     .author-image {
       display: inline-block;
@@ -902,8 +968,9 @@ ul.archive {
 
     .intro-content {
       display: inline-block;
-      width: calc(100% - 270px);
+      width: 60%;
       vertical-align: top;
+      color: $color-white;
       
       @media (max-width: $mq-sm) {
         width: 95%;
@@ -912,39 +979,14 @@ ul.archive {
         text-align: center;
         font-size: 1em;
       }
-
-      h4 {
-        text-align: right;
-        font-size: 1.3em;
-        line-height: 1.5em;
-        font-weight: 300;
-        color: #4a4a4a;
+      h3 {
+        color: $color-alpha;
+        background: $color-white;
+        padding: 5px;
       }
-    }
-  }
-
-  .subscribe-container {
-    text-align: center;
-
-    label[for="mce-EMAIL"] {
-      display: none;
-    }
-    input#mce-EMAIL {
-        border-radius: 2px;
-        background: rgba(255, 255, 255, 0.3);
-        width: 60%;
-        padding: 0.5em;
-        color: $color-white;
-        border-style: none;
-        font-size: 0.8em;
-        line-height: 1.42857143;
-        color: #555555;
-        border: 1px solid #ccc;
-        -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
-        box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
-        -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-        -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-        transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+      p {
+        font-family: $font-header;
+      }
     }
   }
 
@@ -1020,12 +1062,22 @@ ul.archive > li {
 Contact page
 */
 .contact-links {
+  i {
+    margin-right: 10px;
+  }
   a {
     color: $color-black;
-    // font-family: $font-header;
+    font-family: $font-header;
   }
   a:hover {
     color: $color-alpha;
+  }
+}
+
+.contact-page {
+  .subscribe {
+    margin-top: 20px;
+    padding-top: 20px;
   }
 }
 

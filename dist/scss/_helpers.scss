@@ -64,6 +64,12 @@
  * Img position helpers (for markdown)
  */
 
+ .img-profile-left {
+   float: left;
+   width: 150px;
+   border-radius: 50%;
+ }
+
 .img-right-25,
 .img-right-40,
 .img-right-50 {

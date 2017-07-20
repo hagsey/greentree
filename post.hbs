@@ -1,10 +1,13 @@
 {{!< default}}
 
+<div class="post-email-sign-up"> 
+  {{> "email-signup"}}
+</div>
 {{#post}}
 
 <article>
 
-  <header class="section-padding--lg mast rellax" data-rellax-speed="-4">
+{{!--   <header class="section-padding--lg mast rellax" data-rellax-speed="-4">
     <a class="nav nav--white" href="/">
       <i class="fa fa-lg fa-arrow-left"></i>
       <span>Back to home</span>
@@ -13,19 +16,16 @@
     <div class="mast__container">
       <h1 style="font-size:6em;">
         <img class="logo" src="/assets/images/GTT.png">
-        {{!-- <span style="font-size:1.2em;">E</span>RIC<span style="text-transform:none;color:#27ae60;"><span style="font-size:1.2em;">H</span>AGEMANN</span> --}}
+        <span style="font-size:1.2em;">E</span>RIC<span style="text-transform:none;color:#27ae60;"><span style="font-size:1.2em;">H</span>AGEMANN</span>
       </h1>
 
-            <div class="email-sign-up"> 
-        {{> "email-signup"}}
-      </div>
     </div>
-  </header>
-
-  <section class="section-padding bg-grey">
+  </header>--}}
+  <section class="section-padding--sm bg-white">
     <div class="post">
-      <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="MMMM D, YYYY"}}</time>
       <h1>{{title}}</h1>
+     <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="MMMM D, YYYY"}} | Posted in: {{tags}}</time>
+      <img src="{{image}}" /> 
       {{>'share'}}
       {{content}}
       <div class="tags">
@@ -36,22 +36,22 @@
     </div>
   </section>
 
-  {{#author}}
-  <section class="author section-padding--sm">
-    <div class="author-image">
-      <img src="{{image}}">
-    </div>
-    <div class="author-container">
-      <div class="author-name">
-        <h4>{{name}}</h4>
-      </div>
-      <div class="author-bio">
-        <p>{{bio}}</p>
+  <section class="section-padding bg-gray">
+    <div class="container">
+      <div class="clearfix subscribe-container">
+        <img class="img-profile-left" src="/assets/images/charlie6.jpg" />
+        <div class="subscribe-content">
+          <h3>Did you enjoy that?</h3>
+          <p>If so, I'd really appreciate your email. No spam, no daily pestering, no selling. I don't roll like that. I'll just send you a weekly update of my latest posts. Charlie and I thank you. <i class="fa fa-smile-o" aria-hidden="true"></i>
+</p>
+          <div class="email-sign-up"> 
+          {{> "email-signup"}}
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  {{/author}}
 
 </article>
 

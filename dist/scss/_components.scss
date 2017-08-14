@@ -659,9 +659,15 @@ ul.archive {
   }
 
   a {
-    color: $color-alpha;
+    border-bottom: 4px solid $color-alpha;
   }
+  a:hover {
+    background: $color-alpha;
+    color: white;
+    transition: all 0.2s ease-in-out;
+    border-bottom: none;
 
+  }
   img {
     margin: 2em 0;
   }

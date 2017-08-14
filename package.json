@@ -5,6 +5,7 @@
   "main": "gulpfile.js",
   "homepage": "",
   "scripts": {
+    "root": "ssh root@138.197.101.61",
     "start": "gulp"
   },
   "keywords": [

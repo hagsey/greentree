@@ -1,10 +1,19 @@
 {
-  "name": "greentree",
+  "name": "bigred",
   "version": "1.0.0",
-  "description": "Green tree is based on Trophy-Ghost by Thomas Vaeth",
+  "description": "Big red is my own shit",
   "main": "gulpfile.js",
   "homepage": "",
   "scripts": {
+    "post": "scp post.hbs root@138.197.101.61:/var/www/ghost/content/themes/bigred/.",
+    "loop": "scp partials/loop.hbs root@138.197.101.61:/var/www/ghost/content/themes/bigred/partials/.",
+    "head": "scp partials/head.hbs root@138.197.101.61:/var/www/ghost/content/themes/bigred/partials/.",
+    "footer": "scp partials/footer.hbs root@138.197.101.61:/var/www/ghost/content/themes/bigred/partials/.",
+    "header": "scp partials/header.hbs root@138.197.101.61:/var/www/ghost/content/themes/bigred/partials/.",
+    "graphic": "scp partials/graphic-strip.hbs root@138.197.101.61:/var/www/ghost/content/themes/bigred/partials/.",
+    "sidebar": "scp partials/sidebar.hbs root@138.197.101.61:/var/www/ghost/content/themes/bigred/partials/.",
+    "default": "scp default.hbs root@138.197.101.61:/var/www/ghost/content/themes/bigred/.",
+    "css": "scp assets/css/main.min.css root@138.197.101.61:/var/www/ghost/content/themes/bigred/assets/css/.",
     "root": "ssh root@138.197.101.61",
     "start": "gulp"
   },

@@ -4,15 +4,13 @@
   {{> "head"}}
 
   <body>
-    {{> "nav-bar"}}
-
-    <main role="main" class="🏆">
-
+    {{> "graphic-strip"}}
+    <div class="site-wrapper">
+      {{> "header"}}
+      <div class="main"> 
       {{{body}}}
-
-    </main>
-
-    {{> "footer"}}    
-
+      </div>
+      {{> "footer"}}    
+    </div>
   </body>
 </html>

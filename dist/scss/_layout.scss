@@ -1,17 +1,64 @@
-/**
- * Body
- */
-body {
-  background-color: $color-grey;
-  padding-top: 4.8em;
+.site-header {
+  grid-area: header;
+}
+.sidebar {
+  grid-area: sidebar;
+  padding: 15px;
 }
 
-/**
- * Sections
- */
-section {
-  position: relative;
+.blog {
+  grid-area: blog;
 }
+.blog-content {
+  grid-area: blog-content;
+}
+.site-footer {
+  grid-area: footer;
+}
+
+.main {
+  grid-area: main;
+  padding: 15px;
+}
+
+.site-wrapper {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-gap: 10px;
+  grid-template-areas: 
+    "header" 
+    "main" 
+    "footer";
+}
+.blog-wrapper {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-gap: 0px;
+  grid-template-areas:
+    "blog-content"
+    "sidebar";
+
+}
+@media (min-width: $mq-md) {
+  .blog-wrapper {
+    grid-template-columns: 2fr minmax(auto, 300px);
+    grid-template-areas: "blog-content sidebar";
+    grid-gap: 15px;
+  }
+}
+
+@media (min-width: $mq-xl) {
+  .blog-wrapper {
+    grid-gap: 15px;
+    grid-template-columns: auto minmax(auto, 700px) minmax(auto, 300px) auto;
+    grid-template-areas: ". blog-content sidebar .";
+  }
+
+}
+
+.section {}
 
 .section-padding {
   padding: 4em 0;
@@ -25,66 +72,5 @@ section {
 
   &--sm {
     padding: 2em 0;
-  }
-}
-
-/**
- * Class Container (BEM)
- */
-[class*='__container'] {
-  position: relative;
-  z-index: 1;
-}
-
-.container {
-  width: 85%;
-  max-width: 900px;
-  margin: 0 auto;
-
-  @media (max-width: $mq-md) {
-    width: 96%;
-  }
-}
-
-/**
- * Blog page
- */
-.previews {
-
-  @media (max-width: $mq-md) {
-    display: flex;
-    flex-direction: column;
-  }
-
-  & > * {
-
-    &:first-child {
-      position: relative;
-
-      height: 20em; // changed from default of 30em
-
-      background-color: $color-black;
-
-      @media (min-width: $mq-md) {
-        position: fixed;
-        top: 0;
-        left: 0;
-
-        height: 100%;
-        width: 45%;
-      }
-
-      &:after {
-        @extend %overlay;
-      }
-    }
-
-    &:last-child {
-      min-height: 100vh;
-
-      @media (min-width: $mq-md) {
-        margin-left: 45%;
-      }
-    }
   }
 }

@@ -1,0 +1,34 @@
+<div class="site-header">
+  <div class="site-header-primary">
+    <a href="/" class="site-header-title"><span>Eric</span>Hagemann</a>
+    <p class="site-header-subtitle">Training and fitness. Simpler.</p>
+  </div>
+
+  <i class="hamburger fa fa-bars"></i>
+  <div class="site-header-menu">
+    <a class="site-header-menu__link" href="/about">About</a>
+    <a class="site-header-menu__link" href="/online-coaching">Online Coaching</a>
+    <a class="site-header-menu__link" href="/contact">Contact</a>
+  </div>
+</div>
+
+<div class="mobile-menu">
+  <i class="close-menu fa fa-close fa-lg"></i>
+  <div class="mobile-menu__content">
+    <h4 class="mobile-menu__title">Pages</h4>
+    <a class="mobile-menu__link" href="/">Home</a>
+    <a class="mobile-menu__link" href="/about">About</a>
+    <a class="mobile-menu__link" href="/online-coaching">Online Coaching</a>
+    <a class="mobile-menu__link" href="/contact">Contact</a>
+    <h4 class="mobile-menu__title">Topics</h4>
+
+    {{#get "tags" limit="all" as |tags|}}
+      <div class="mobile-tags">
+      {{#foreach tags}}
+        <a class="mobile-menu__link" href="{{url}}">{{name}}</a>
+      {{/foreach}}
+      </div>
+    {{/get}}
+
+  </div>
+</div>

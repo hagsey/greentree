@@ -1,0 +1,39 @@
+<div class="sidebar">
+  <div class="sidebar__item">
+    <h3 class="sidebar-title">About Eric</h3>
+    <p>Eric Hagemann, MSc, CSCS, is a sport performance coach based out of Ontario, Canada where he works with athletes and every day folks on getting healthier, fitter, and understanding the training process better.</p>
+    <img class="profile-img" src="/assets/images/profile2.jpg" />
+  </div>
+
+  <div class="sidebar__item">
+    <div class="sidebar__subscribe">
+      <h3 class="sidebar-title">Subscribe</h3>
+      <p>
+       Want to stay up to date? Be sure to fill out your email below and get notified of new posts. No spamming or selling.
+      </p>
+      <div class="email-signup"> 
+        {{> email-signup}}
+      </div>
+    </div>
+  </div>
+
+  <div class="sidebar__item">
+    <h3 class="sidebar-title">Topics</h3>
+    {{#get "tags" limit="all" as |tags|}}
+    <div class="tags-list">
+    {{#foreach tags}}
+      <a href="{{url}}">{{name}}</a>
+    {{/foreach}}
+    </div>
+  {{/get}}
+  </div>
+
+  <div class="sidebar__item sidebar__recent">
+    <h3 class="sidebar-title">Most recent</h3>
+    {{#get "posts" limit="20"}}
+      {{#foreach posts}}
+        <a class="post-title post-title--sm" href="{{url}}"><i class="fa fa-angle-double-right"></i>{{title}}</a>
+      {{/foreach}}
+    {{/get}}
+  </div>
+</div>

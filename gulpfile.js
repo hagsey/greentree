@@ -19,10 +19,7 @@ gulp.task('sass', function() {
 
 gulp.task('bundleScripts', function() {
   return gulp.src([
-    './dist/js/vendor/rellax.js',
-    './dist/js/vendor/wow.js',
-    './dist/js/app.js',
-    './dist/js/main.js'
+    './assets/js/app.js'
 
   ])
   .pipe(concat('app.js'))

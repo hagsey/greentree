@@ -72,6 +72,13 @@ hr {
     .img-left-50,
     .img-center-50,
     .img-center-25 {
-        width: 100%;
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
     }
+}
+
+.font-title {
+  font-family: $font-title;
+  text-transform: uppercase;
 }

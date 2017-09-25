@@ -11,8 +11,12 @@
     "footer": "scp partials/footer.hbs root@138.197.101.61:/var/www/ghost/content/themes/bigred/partials/.",
     "header": "scp partials/header.hbs root@138.197.101.61:/var/www/ghost/content/themes/bigred/partials/.",
     "graphic": "scp partials/graphic-strip.hbs root@138.197.101.61:/var/www/ghost/content/themes/bigred/partials/.",
+    "img": "chmod 755 assets/images/*",
     "sidebar": "scp partials/sidebar.hbs root@138.197.101.61:/var/www/ghost/content/themes/bigred/partials/.",
     "default": "scp default.hbs root@138.197.101.61:/var/www/ghost/content/themes/bigred/.",
+    "about": "scp page-about.hbs root@138.197.101.61:/var/www/ghost/content/themes/bigred/.",
+    "contact": "scp page-contact.hbs root@138.197.101.61:/var/www/ghost/content/themes/bigred/.",
+    "coaching": "scp page-online-coaching.hbs root@138.197.101.61:/var/www/ghost/content/themes/bigred/.",
     "css": "scp assets/css/main.min.css root@138.197.101.61:/var/www/ghost/content/themes/bigred/assets/css/.",
     "root": "ssh root@138.197.101.61",
     "start": "gulp"
